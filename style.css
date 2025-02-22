@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.logo span {
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+
+/* Desktop Navigation */
+.nav-container .links {
+    display: flex;
+}
+.nav-container .links a {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+}
+.nav-container .links a:hover {
+    color: #077b32;
+}
+
+/* Mobile Navigation */
+.hamburg,
+.cancel {
+    cursor: pointer;
+    color: white;
+    display: none;
+    font-size: 2.5rem;
+}
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-500px);
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.3s ease-in-out;
+    z-index: 100;
+}
+.dropdown .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dropdown .links a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+.dropdown .links a:hover {
+    background-color: #077b32;
+}
+
+/* Hero Section */
+section {
+    width: 100%;
+    height: 90vh;
+}
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.image {
+    width: 300px;
+    height: 50vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #077b32;
+}
+.image img {
+    width: 100%;
+}
+.content {
+    color: white;
+    width: 40%;
+}
+.content h1 span {
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+.typewriter-text {
+    color: #077b32;
+}
+.social-links i {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+/* Button */
+.content button {
+    background-color: #077b32;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.content button:hover {
+    background-color: transparent;
+    color: #077b32;
+    border: 2px solid #077b32;
+}
+
+/* Responsive Design */
+@media (max-width: 884px) {
+    .nav-container .links {
+        display: none;
+    }
+    .hamburg,
+    .cancel {
+        display: block;
+    }
+    .main-container {
+        flex-direction: column;
+    }
+    .image {
+        width: 50%;
+        height: auto;
+    }
+    .content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 440px) {
+    .image {
+        width: 50%;
+        height: auto;
+    }
+}
